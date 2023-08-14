@@ -1,0 +1,167 @@
+nav .menu-btn,
+.menu-icon{		display : none;	}
+/* ==================RESPONSIVE OF 900PX==================== */
+@media screen and (max-width:992px) {
+/*  responsive of navbar for max width 900px */
+header nav{
+	position: absolute;
+	top: 55px;
+	left: 0%;
+	width: 55%;
+	z-index: 2;
+}
+header nav ul {display: none !important; } 
+header nav ul li{	
+	border-bottom: 0.5px solid #eee;
+	padding: 15px;
+}
+header nav ul .nav-link{ padding: 1rem !important;}
+nav .menu-icon{
+	display: block;
+    cursor: pointer;
+    padding: 28px 0;
+    margin-right: 2%;
+    user-select: none;
+    position: absolute;
+    left: -1px;
+    padding: 27px;
+    top: -56px;
+	background-color: black;
+}
+nav .menu-icon .nav-icon{
+	background-color: #ffffffb6;
+	display: block;
+	height: 2px;
+	position: relative;
+	transition: background-color 0.2s ease-out;
+	width: 18px;
+}
+nav .menu-icon .nav-icon:before,
+nav .menu-icon .nav-icon:after{
+	background:#fff;
+	content: '';
+	display: block;
+	height: 100%;
+	position: absolute;
+	transition: all ease-out 0.2s;
+	width:100%;
+}
+nav .menu-icon .nav-icon:before{	top : 5px;}
+nav .menu-icon .nav-icon:after{	top : -5px;}
+nav .menu-btn:checked ~ .menu-icon .nav-icon{	background : transparent;}
+nav .menu-btn:checked ~ .menu-icon .nav-icon:before{
+	transform : rotate(-45deg);
+	top : 0;
+}
+nav .menu-btn:checked ~ .menu-icon .nav-icon:after{
+	transform : rotate(45deg);
+	top : 0;
+}
+nav .menu-btn:checked ~ ul {
+	display: block !important;
+	background-color: #fff;
+}
+
+}
+/* RESPONSIVE 720PX  */
+@media(max-width : 768px){
+
+}
+/* RESPONSIVE 576px  */
+@media(max-width : 576px){
+	#home {
+		background: url('../business-team.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+		opacity: .9;
+	}
+	#home > img {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		opacity: .4;
+		object-fit: cover;
+	}
+	#home > div {
+		z-index: 1;
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#home h1 {
+		font-weight: 400;
+		font-size: 3rem;
+	}
+	#home h1::after  {
+		height: 0px;
+	}
+	#home h1::before  {
+		height: 0px;
+	}
+	#home > div p {
+		width: 100%;
+		color: white;
+		line-height: 25px;
+	}
+	#about_us {
+		min-height: 70vh;
+	}
+	#about_us .about-title {
+		position: relative;
+		margin-left: 110px !important;
+	}
+	#about_us .about-title::after {
+		content: "";
+		height: 50px;
+		width: 10%;
+		position: absolute;
+		left: 0%;
+		bottom: -30px;
+		margin: auto;
+		background: url('../images/arc-line.svg');
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		background-position-x: center;
+	}
+	#about_us .about-us-content {
+		width: 100%;
+	}
+	#about_us .about-us-img {
+		width: 100%;
+	}
+	#about_us img {
+		width: 100%;
+	}
+
+	#contact_us .w-50 {
+		width: 90% !important;
+	}
+		
+	#discount {
+		height: 100vh;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+
+	}
+	.content-discount {
+		width: 100%;
+		margin: 1rem;
+	}
+	.content-discount p {
+		line-height: 25px;
+	}
+
+	.discount-img {
+		margin: 2rem;
+		width: 100%;
+	}
+	.discount-img img {
+		box-shadow: 1px 2px 50px #bebebe;
+		border-radius: 0% 0% 50% 0%;
+		width: 100%;
+	}
+	
+}

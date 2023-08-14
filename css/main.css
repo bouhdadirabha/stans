@@ -1,0 +1,324 @@
+html { scroll-behavior: smooth;}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;  
+    width: 100%;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+}
+:root {
+    --maincolor1: #b3bac4;
+    --maincolor2: #3073ea;
+    --maincolor3: #f8f8f8;
+    --maincolor4: #99b7f9;
+}
+
+/*  header */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 55px;   
+}
+header nav  {
+    width: 75%;
+}
+header nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+header nav ul li {
+    list-style-type: none;
+}
+header nav ul li a{
+    color: black;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: ease-in-out .3s;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    color: var(--maincolor2);
+}
+.logo {
+    width: 150px;
+    height: 50px;
+    position: relative;
+    
+}
+.logo > img {
+    position: absolute;
+    top: -6px;
+    width: 100%;
+}
+/* home */
+main {
+    background-image: linear-gradient(45deg, black, #292929, black);
+}
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#home > img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: .4;
+    height: 100%;
+}
+#home > div {
+    z-index: 1;
+    height: 50vh;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#home h1 {
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+    -webkit-text-stroke: 1px ;
+    text-shadow: 1px 2px 2px black;
+    position: relative;
+    font-size: 5rem;
+    margin: 0;
+    font-family: ManyChatGravity,sans-serif;
+}
+#home h1::after  {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: -100px;;
+}
+
+#home h1::before  {
+    content: "";
+    width: 80px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    right: -50px;;
+}
+#home > div p {
+    color: white;
+    line-height: 25px;
+}
+
+/* cards */
+.service {
+    background-color: var(--maincolor3);
+    text-align: center;
+    padding: 1rem;
+}
+.service h2 {
+    margin: 0;
+}
+.all-card {
+    background-color: var(--maincolor3);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.card {
+    flex-shrink: 0;
+    flex-grow: 0;
+    position: relative;
+    margin: 25px 10px;
+    width: 350px;
+    padding: 0;
+    height: 300px;
+    transition: 0.4s ease all;
+    overflow: hidden;
+}
+.card-img {
+    width: 100%;
+    height: 100%;
+    transition: .3s ease-in-out;
+}
+.card-img  img {
+    aspect-ratio :3/2 ;
+    object-fit: contain;
+}
+.card:hover  {
+    box-shadow: 1px 2px 10px  #99b7f9;
+}
+.card .into-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1d1d1d;
+    padding: 1rem;
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    bottom: -383px;
+    transition: all ease-in-out .5s;
+}
+.card .into-card h3 {
+    margin: 0;
+}
+.desc {
+    line-height: 25px;
+}
+.card:hover .into-card {
+    transform: translateY(-350px);
+    opacity: .85;
+    color: white;
+}
+.card .into-card a{
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 5px ;
+    text-decoration: dashed;
+    transition: all ease-in-out .3s;
+}
+.card .into-card a:hover{
+    background-color: var(--maincolor4);
+    box-shadow: 1px 2px 15px var(--maincolor4);
+    color: black;
+}
+/* about us */
+#about_us {
+    min-height: 70vh;
+}
+
+#about_us .about-title::after {
+    content: "";
+    height: 50px;
+    width: 8rem;
+    position: absolute;
+    left: 0%;
+    bottom: -30px;
+    margin: auto;
+    background: url('../images/arc-line.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position-x: center;
+}
+#about_us {
+    margin: 0 !important;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#about_us .about-us-content {
+    width: 50%;
+}
+#about_us .about-us-img {
+    width: 30%;
+}
+#about_us img {
+    width: 100%;
+}
+/*  contact  */
+#contact_us {
+    width: 100%;
+}
+#contact_us > .container-from-card {
+    width: 100%;
+}
+
+/*card style */
+#contact_us .container-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#contact_us .container-card .card-info {
+    color: whitesmoke;
+    height: 200px;
+    width: 350px;
+    margin: 15px 0;
+    border-radius: 4px;
+    background-color: var(--maincolor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    word-wrap: break-word;
+}
+#contact_us .container-card .card-info p {
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    margin: 4px 0;
+}
+#contact_us .container-card .card-info a { 
+    color :whitesmoke;
+    letter-spacing: 1.2px;
+}
+#contact_us .container-card .card-info .hr {
+    color: #1d1d1d;
+    border: 1px solid ;
+    width: 30%;
+    margin: 8px
+}
+/*  footer  */
+svg {
+    background-color: white;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    background: #99b7f9;
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+.footer .social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 3rem;
+    width: 3rem; 
+    font-size: 1.5rem;
+}
+.footer .container p {
+    font-size: 1em !important;
+    letter-spacing: 2px;
+    color: white;
+}
+/* discount */
+
+#discount {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+.content-discount {
+    width: 50%;
+    margin: 2rem;
+}
+.content-discount p {
+    line-height: 25px;
+}
+
+.discount-img {
+    margin: 2rem;
+    width: 50%;
+}
+.discount-img img {
+    box-shadow: 1px 2px 50px #bebebe;
+    border-radius: 0% 0% 50% 0%;
+    width: 100%;
+}
